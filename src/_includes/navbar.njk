@@ -1,13 +1,8 @@
-<ul>
-    {% for page in collections.all %}
-        {% if page.url != "/" %}
-            <li>
-                <a href="{{ page.url }}">{{ page.data.title }}</a>
-            </li>
-        {% endif %}
+<img src="/assets/logo/logo.png" alt="logo">
+<ol>
+    {% for pagevar in collections.nav %}
+        <li class="{% if pagevar.url == page.url %}selected{% endif %}">
+            <a href="{{ pagevar.url }}">{{ pagevar.data.title }}</a>
+        </li>
     {% endfor %}
-
-    <li>
-        <a href="/">Home</a>
-    </li>
-</ul>
+</ol>

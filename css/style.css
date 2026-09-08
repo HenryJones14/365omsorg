@@ -1,39 +1,4 @@
-body {
-    margin: 0;
-    font-family: sans-serif;
-}
-
-nav {
-    padding: 1rem;
-}
-
-nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-/*main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-}*/
-
-footer {
-    background-color: black;
-    color: white;
-
-    text-align: center;
-    padding: 2rem;
-}
-
-img {
+main img {
   display: block;
   width: 100%;
   min-height: 100vh;
