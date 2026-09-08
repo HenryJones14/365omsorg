@@ -1,0 +1,6 @@
+# node.js cache
+package-lock.json
+/node_modules/
+
+# build output
+/_site/

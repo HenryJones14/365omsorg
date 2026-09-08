@@ -1,0 +1,13 @@
+<ul>
+    {% for page in collections.all %}
+        {% if page.url != "/" %}
+            <li>
+                <a href="{{ page.url }}">{{ page.data.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+
+    <li>
+        <a href="/">Home</a>
+    </li>
+</ul>
