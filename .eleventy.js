@@ -2,7 +2,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addGlobalData("buildYear", new Date().getFullYear());
 
-    //eleventyConfig.addPassthroughCopy("src/assets");
+    eleventyConfig.addPassthroughCopy("src/assets");
 
     eleventyConfig.addCollection("nav", function (collectionApi) {
         return collectionApi
