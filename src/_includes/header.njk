@@ -1,0 +1,10 @@
+<img src="/assets/logo/Logo_Vec.svg" alt="logo">
+<nav>
+    <ol>
+        {% for pagevar in collections.nav %}
+            <li class="{% if pagevar.url == page.url %}selected{% endif %}">
+                <a href="{{ pagevar.url }}">{{ pagevar.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+</nav>
