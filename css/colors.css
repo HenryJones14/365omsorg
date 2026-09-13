@@ -1,7 +1,28 @@
 :root {
   --text: #040316;
   --background: #fbfbfe;
-  --primary: #f2610d;
-  --secondary: #fef4e7;
-  --accent: #405030;
+
+  /* Poping spicy orange*/
+  --color-orange-forground: hsl(20, 70%, 50%); /* #D96226 */
+  --color-orange-background: hsl(20, 80%, 95%); /* #FCEFE8 */
+
+  --color-orange-bright: hsl(20, 90%, 50%); /* #F2590D */
+  --color-orange-dark: hsl(20, 90%, 30%); /* #913608 */
+
+
+  /* Mature olive green*/
+  --color-green-forground: hsl(90, 50%, 20%); /* #334D19 */
+  --color-green-background: hsl(90, 75%, 95%); /* #F2FCE9 */
+
+  --color-green-bright: hsl(90, 35%, 50%); /* #80AC53 */
+  --color-green-dark: hsl(90, 35%, 15%); /* #263419 */
+
+
+  /* Pleasing sand yellow*/
+  --color-yellow-forground: hsl(35, 70%, 70%); /* #E8BB7D */
+  --color-yellow-background: hsl(35, 100%, 95%); /* #FFF4E5 */
+
+  --color-yellow-bright: hsl(35, 75%, 50%); /* #DF8F20 */
+  --color-yellow-dark: hsl(35, 90%, 30%); /* #915808 */
+  
 }
