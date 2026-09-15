@@ -1,6 +1,11 @@
 <img src="/assets/logo/Logo_Vec.svg" alt="logo">
+<div href="javascript:void(0);" class="Menu" onclick="myFunction()">
+    <span class="MenuBar" id="Bar1"></span>
+    <span class="MenuBar" id="Bar2"></span>
+    <span class="MenuBar" id="Bar3"></span>
+</div>
 <nav>
-    <ol>
+    <ol id="MenuItems">
         {% for pagevar in collections.nav %}
             <li class="{% if pagevar.url == page.url %}selected{% endif %}">
                 <a href="{{ pagevar.url }}">{{ pagevar.data.title }}</a>
@@ -8,3 +13,20 @@
         {% endfor %}
     </ol>
 </nav>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("MenuItems");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    document.getElementById("Bar1").classList.remove("open");
+    document.getElementById("Bar2").classList.remove("open");
+    document.getElementById("Bar3").classList.remove("open");
+  } else {
+    x.style.display = "block";
+    document.getElementById("Bar1").classList.add("open");
+    document.getElementById("Bar2").classList.add("open");
+    document.getElementById("Bar3").classList.add("open");
+  }
+}
+</script>

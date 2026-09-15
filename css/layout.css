@@ -1,31 +1,100 @@
-html {
-  font-size: 20px;
+@media (max-width: 870px) {
+    html {
+        font-size: 25px;
+    }
 }
 
-@media (min-width: 640px) {
-
+@media (min-width: 870px) {
     html {
         font-size: 16px;
+        max-width: 1600px;
+        margin-inline: auto;
     }
+}
 
-    /* Nav bar */
-    header {
+/* Nav bar */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--color-yellow-background);
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+
+    padding: 10px;
+    margin: 0;
+}
+
+header .Menu {
+    width: 70px;
+    height: 60px;
+
+    padding: 10px;
+}
+
+header .MenuBar {
+
+    width: 100%;
+    height: 12px;
+    background: var(--color-orange-forground);
+    border-radius: 6px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: 200ms ease;
+}
+
+header #Bar1.open {
+
+    transform: translate(0, 24px) rotate(315deg);
+}
+
+header #Bar2.open {
+
+    opacity: 0%;
+}
+
+header #Bar3.open {
+
+    transform: translate(0, -24px) rotate(225deg);
+}
+
+header .MenuBar.open {
+
+    background: var(--color-yellow-forground);
+}
+
+@media (max-width: 870px)
+{
+    .Menu {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
 
-        margin: 0;
-        padding: 0;
-
-        background-color: var(--color-yellow-background);
+        margin-left: auto;
+        margin-right: 10px;
     }
 
-    header img {
-        display: block;
-        width: 100px;
-        height: 100px;
+    #MenuItems {
+        display: none;
+    }
 
-        margin: 0;
-        padding: 10px;
+    nav {
+        flex: 0 0 100%; 
+    }
+}
+
+@media (min-width: 870px) {
+
+    .Menu {
+        display: none;
     }
 
     /* Nav list */
@@ -38,65 +107,63 @@ html {
         justify-content: flex-end;
 
         margin: 0 0 0 auto;
-        padding: 2rem;
-        
-        gap: 2rem;
-        list-style: none;
-    }
-
-    /* Nav item */
-    nav li.selected {
-        margin: 0;
-        padding: 5px;
-        
-        background-color: hsl(35, 90%, 80%);
-        border-radius: 10px;
-
-        overflow: hidden;
-    }
-
-    /* Nav item */
-    nav li {
-        margin: 0;
-        padding: 5px;
-    }
-
-    /* Link text */
-    nav a {
-        color: var(--color-green-forground);
-        
-        font-size: 2rem;
-        text-decoration: none;
-
-        /* Animation display */
-        position: relative;
-        display: inline-block;
-    }
-
-    nav a::after {
-        background: var(--color-orange-forground);
-
-        content: "";
-        width: 100%;
-        height: 2px;
-
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-
-        /* Animation */
-        transition: transform 300ms ease;
-        transform-origin: center;
-        transform: scaleX(0);
-    }
-
-    nav a:hover::after {
-        /* Animation */
-        transition: transform 100ms ease;
-        transform: scaleX(1);
     }
 }
 
+/* Nav item */
+nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 1rem;
+    padding: 0.2rem;
+}
+
+nav li.selected {
+    
+    background-color: hsl(35, 90%, 80%);
+    border-radius: 0.4rem;
+
+    overflow: hidden;
+}
+
+/* Link text */
+nav a {
+    color: var(--color-green-forground);
+    
+    font-size: 2rem;
+    text-decoration: none;
+
+    /* Animation display */
+    position: relative;
+    display: inline-block;
+}
+
+nav a::after {
+    background: var(--color-orange-forground);
+
+    content: "";
+    width: 100%;
+    height: 2px;
+
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    /* Animation */
+    transition: transform 300ms ease;
+    transform-origin: center;
+    transform: scaleX(0);
+}
+
+nav a:hover::after {
+    /* Animation */
+    transition: transform 100ms ease;
+    transform: scaleX(1);
+}
 
 
 main {

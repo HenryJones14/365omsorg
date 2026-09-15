@@ -45,7 +45,7 @@ main .TopHeader
 .ContentGrid {
   display: grid;
   
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   
   padding: 2rem;
   margin: 0px;
@@ -76,7 +76,7 @@ main .TopHeader
 
 article img {
   width: calc(100% + 2rem);
-  height: calc(375px * 0.3 + 2rem);
+  height: calc(300px * 0.3 + 2rem);
   margin: -1rem -1rem 0rem -1rem;
 
   object-fit: cover;
@@ -87,11 +87,11 @@ article h3 {
   font-size: 2rem;
   margin-bottom: 0;
   margin-top: 0;
-  padding: 0;
+  padding: 0.7rem;
 }
 
 article p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 0;
   margin-top: 0;
   padding: 0.5rem;
